@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ParaDrop Sticky Board</title>
+
+    <style>
+      div.holder {
+        float: left;
+        min-width: 240px;
+        width: 24%;
+        padding: 5px 5px;
+      }
+
+      div.separator {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ParaDrop Sticky Board</h1>
+
+    <div>
+      <% for(var i = 0; i<notes.length; i++) {%>
+        <div class="holder">
+          <img src="<%= notes[i].img %>" width="100%"></img>
+        </div>
+      <% } %>
+    </div>
+
+    <div class="separator"></div>
+
+    <h2>Create a Note</h2>
+    <p>Upload an image file to create a note for others to see.</p>
+    <form action="/create" method="POST" encType="multipart/form-data">
+      <input type="file" name="img" />
+      <input type="submit" value="Create" />
+    </form>
+  </body>
+</html>

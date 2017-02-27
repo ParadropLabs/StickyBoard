@@ -1,0 +1,15 @@
+{
+  "name": "sticky_board",
+  "version": "1.0.0",
+  "description": "Post images for others to see.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lance Hartung",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "express-fileupload": "^0.1.1"
+  }
+}
