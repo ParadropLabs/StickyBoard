@@ -1,4 +1,14 @@
+name: sticky-board
+description: Post images for others to see.
 version: 1
-type: light
-use: node
-command: node index.js
+
+services:
+  main:
+    command: node index.js
+    image: node
+    source: .
+    type: light
+
+web:
+  port: 3000
+  service: main
